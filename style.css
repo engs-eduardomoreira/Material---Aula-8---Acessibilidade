@@ -1,15 +1,20 @@
 /* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+:root {
+    --PRINCIPAL: #771212;              
+    --texto-secundario: #ffffff;    
+    
+}
 
+body {
+    font-family: Lexend, sans-serif;
+    padding: 0;
+  margin: 0;  
 
 }
 
-/* Cabeçalho */
 header {
-    background-color: chartreuse;
+    background-color: var(--PRINCIPAL);
 
     text-align: center;
     padding: 20px;
@@ -33,9 +38,8 @@ header {
     
 }
 
-/* Menu de navegação */
 nav {
-    background-color: red;
+    background-color: rgb(192, 25, 25);
     text-align: center;
     padding: 10px;
 }
@@ -47,10 +51,22 @@ nav a {
 }
 
 nav a:hover {
-
+.acessibilidade button 
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;   
 }
 
-/* Conteúdo principal */
+.acessibilidade button:hover {
+    background-color: var(--PRINCIPAL);   
+    color: white;                       
+    transform: scale(1.1);                
+}
+
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -64,24 +80,17 @@ article {
 }
 
 article h2 {
-    color: purple; 
+    color: rgb(153, 7, 7); 
 }
-
-
-
 
 article img{                            
     max-width: 150px;
 }
 
-
-
-
-
 /* Rodapé */
 footer {
-    background-color:darkgoldenrod;
-    color: peru;
+    background-color: var(--PRINCIPAL);
+    color: var(--texto);
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
@@ -91,20 +100,25 @@ footer {
 
 /* Modo de alto contraste */
 .alto-contraste {
-    background-color: black !important;
-    color: white !important;
+    background-color: black ;
+    color: white ;          
 }
 
 .alto-contraste header,
-.alto-contraste nav{
-    background-color: black !important;
-    color: yellow !important;
+.alto-contraste nav {
+    background-color: black ;
+    color: rgb(255, 255, 255) ;
 }
 
-.alto-contraste a, 
-.alto-contraste h2, 
+.alto-contraste main {                
+    background-color: black ;
+    color: white ;
+}
+
+.alto-contraste a,
+.alto-contraste h2,
 .alto-contraste .data,
 .alto-contraste footer {
-    background-color: black !important;
-    color: white !important;
+    background-color: black ;
+    color: rgb(255, 255, 255) ;
 }
